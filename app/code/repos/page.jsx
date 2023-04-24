@@ -7,6 +7,7 @@ async function fetchRepos( ) {
   const response = await fetch(
     'https://api.github.com/users/bradtraversy/repos'
   );
+  await new Promise((reslove)=>setTimeout(reslove,1000)) // wait 1 sec
   const repos = await response.json();
   return repos;
 }
@@ -16,8 +17,8 @@ const ReposPage = async () => {
 
   return (
     <>
-      <div className="mx-auto container py-2 px-6">
-      <h2 className='text-center font-semibold text-xl mt-14 mb-5 text-black'>Repositories</h2>
+      <div className="mx-auto container py-[5.75rem] px-6">
+      <h2 className='text-center font-semibold text-xl mb-5 text-black'>Repositories</h2>
         {repos.map((repo) => (
             <Card className='border border-gray-400 mb-2 py-5 px-4 rounded-lg'  key={repo.id}  href={`/code/repos/${repo.name}`}>       
             <h5 className="text-2xl font-bold tracking-tight dark:text-white text-gray-700">
