@@ -1,32 +1,25 @@
 'use client'
-import Link from 'next/link';
-import { FaStar, FaCodeBranch, FaEye } from 'react-icons/fa';
-import { Card } from 'flowbite-react/lib/esm/components';
+import { Card } from "flowbite-react";
+import { FaCodeBranch, FaEye, FaStar } from "react-icons/fa";
 
-async function fetchRepos( ) {
-  const response = await fetch(
-    'https://api.github.com/users/souhail-ouabou/repos',
+
+async function fetchRepo(name){
+    const respone = await fetch(`https://api.github.com/repos/souhail-ouabou/${name}`,
     {
       next: {
         revalidate: 60,
       },
     }
-  );
-
-  //await new Promise((resolve) => setTimeout(resolve, 1000));
-  const repos = await response.json();
-  return repos;
+    )
+    const repo = await respone.json();
+    return repo;
 }
+const Repo = async({name}) => {
 
-const ReposPage = async () => {
-  const repos = await fetchRepos();
+    const repo = await fetchRepo(name);
 
-  return (
-    <>
-      <div className="mx-auto container py-[5.75rem] px-6">
-      <h2 className='text-center font-semibold text-xl mb-5 text-black'>Repositories</h2>
-        {repos.map((repo) => (
-            <Card className='border border-gray-400 mb-2 py-5 px-4 rounded-lg'  key={repo.id}  href={`/code/repos/${repo.name}`}>       
+  return <>
+   <Card className='border border-gray-400 mb-2 py-5 px-4 rounded-lg' >       
             <h5 className="text-2xl font-bold tracking-tight dark:text-white text-gray-700">
             {repo.name}
             </h5>
@@ -45,12 +38,7 @@ const ReposPage = async () => {
                 </span>
               </div>
             </Card>
-          
-          
-        ))}
-      </div>
-      
-    </>
-  );
+  </>;
 };
-export default ReposPage;
+
+export default Repo;
