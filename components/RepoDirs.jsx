@@ -21,7 +21,7 @@ const RepoDirs = async ({ name }) => {
 
   return (
     <>
-      <h3>Directories</h3>
+      <h2>Directories</h2>
       <ul>
         {dirs.map((dir) => (
           <li key={dir.path}>

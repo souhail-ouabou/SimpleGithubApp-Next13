@@ -1,6 +1,9 @@
-
+import Courses from "@/components/Courses";
 const Homepage = () => {
-  return <div>Homepage</div>;
+  return <>
+    <h1>Welcome to Shlo app</h1>
+    <Courses/>
+  </>;
 };
 
 export default Homepage;
