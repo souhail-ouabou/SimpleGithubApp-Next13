@@ -1,3 +1,48 @@
+
+
+
+# SimpleGithubApp 
+![Generic badge](https://img.shields.io/badge/Responsive-Yes-<COLOR>.svg)
+
+**[ENG] => :**
+I build that simple project to explore NextJS 13 and the new features including the app directory, server components, Suspense Bounderies, Caching and Revalidating, API route handlers and more
+
+**[FR] => :**
+Je construis ce projet simple pour explorer NextJS 13 et ses nouvelles fonctionnalités App directory, server components, Suspense Bounderies, Caching and Revalidating, API route handlers and more
+
+
+## Description
+In the home page we have a list of courses that fetched from a route with search functionality. The courses data could be in any type of database or headless CMS. For this example, we will just use a JSON file to keep things simple. 
+And also we are going to fetch data from the GitHub API. 
+We are going to fetch a list of my repositories and display them on a page . 
+https://simple-gitapp.vercel.app/code/repos
+
+
+
+
+
+
+
+## Screenshots
+
+**Repos from GithubAPI:**
+
+![App Screenshot](https://i.imgur.com/Tb54XV4.png)
+
+**Home:**
+
+![App Screenshot](https://i.imgur.com/FD1MGyj.png)
+
+**Search:**
+
+![App Screenshot](https://i.imgur.com/R8d8Es6.png)
+
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/souhailOuabou)
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -13,21 +58,6 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.js`.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
