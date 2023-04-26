@@ -10,8 +10,8 @@ const Header = () => {
 
   <Navbar.Brand as={Link} href="/">
       <img
-          src="https://i.pinimg.com/originals/b6/cd/e8/b6cde81d1c489b0e20d85a6e06c5f8f9.png"
-          className="mr-1 h-6 sm:h-9"
+          src="https://pagepro.co/blog/wp-content/uploads/2020/04/react-1024x912.png"
+          className="mr-3 h-4 sm:h-8"
           alt="Note App Logo"
       />
       <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">

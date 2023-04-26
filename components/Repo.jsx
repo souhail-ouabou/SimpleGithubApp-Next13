@@ -1,5 +1,6 @@
 'use client'
 import { Card } from "flowbite-react";
+import Link from "next/link";
 import { FaCodeBranch, FaEye, FaStar } from "react-icons/fa";
 
 
@@ -18,8 +19,8 @@ const Repo = async ({ name }) => {
 
   const repo = await fetchRepo(name);
 
-  return <>
-    <Card className='border border-gray-400 mb-2 py-5 px-4 rounded-lg' >
+  return <Card className='border border-gray-400 mb-2 py-5 px-4 rounded-lg' >
+      <Link href={`https://github.com/souhail-ouabou/${name}`}>
       <h5 className="text-2xl font-bold tracking-tight dark:text-white text-gray-700">
         {repo.name}
       </h5>
@@ -37,8 +38,8 @@ const Repo = async ({ name }) => {
           <FaEye /> {repo.watchers_count}
         </span>
       </div>
+      </Link>
     </Card>
-  </>;
 };
 
 export default Repo;

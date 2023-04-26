@@ -2,16 +2,9 @@
 import { Card } from "flowbite-react";
 import Link from "next/link";
 
-async function fetchCourses() {
-    const response = await fetch("http://localhost:3000/api/courses");
-    const courses = await response.json();
-    return courses;
-}
-
-const Courses = async () => {
-    const courses = await fetchCourses();
+const Courses = async ({courses}) => {
     return (
-        <div className="mx-auto container py-[5.75rem] px-6">  
+       <>
             {courses.map((course) => (
                 <Card key={course.id} className='border border-gray-400 mb-2 py-5 px-4 rounded-lg' >
                     <h5 className="text-2xl font-bold tracking-tight dark:text-white text-gray-700">
@@ -28,7 +21,7 @@ const Courses = async () => {
 
             ))}
 
-        </div>
+        </>
     )
     return <div>Courses</div>;
 };
